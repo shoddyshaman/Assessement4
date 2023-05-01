@@ -1,0 +1,50 @@
+* {
+    background-color: white;
+}
+
+h1 {
+    background-color: tan;
+}
+
+button {
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    background-color: tan;
+}
+
+.random {
+    font-size: x-large;
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+    font-size: medium;
+}
+
+.shoes {
+    text-align: center;
+    font-size: x-large
+}
+
+input[type='text'] {
+    width: 85%;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid #232323;
+    background-color: tan;
+    color: black;
+}
+
+::placeholder {
+    color: black;
+}
+
+.shoes {
+    background-color: tan;
+}
+
+.add-shoes {
+    margin-top: 10px;
+}

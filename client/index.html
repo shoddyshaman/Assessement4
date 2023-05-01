@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Back End Assessment</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="container">
+  <h1 style="text-align: center;"> Hamza's Assessment</h1>
+  <hr />
+  <header class="random">
+    <h2>Click the button to get a compliment:
+      <button id="complimentButton">Get a compliment</button>
+    </h2>
+    <h2>Click the button to get a fortune:
+      <button id="fortuneButton">Get a fortune</button>
+    </h2>
+  </header>
+  <main>
+    <h2 class="shoes">Rate My New Shoes!</h2>
+    <hr />
+    <form>
+      <h3>Write Your New Shoes Below:</h3>
+      <input type="text" name="shoes" id="title" placeholder="What shoes would you like to add?" />
+      <section id="ratings">
+        <section id="ratings-container">
+          <h3>Rate The Shoes</h3>
+          <div id="radio">
+            <label for="one">
+              <input type="radio" name="ratings" value="1" id="one" />
+              1
+            </label>
+            <label for="two">
+              <input type="radio" name="ratings" value="2" id="two" />
+              2
+            </label>
+            <label for="three">
+              <input type="radio" name="ratings" value="3" id="three" />
+              3
+            </label>
+            <label for="four">
+              <input type="radio" name="ratings" value="4" id="four" />
+              4
+            </label>
+            <label for="five">
+              <input type="radio" name="ratings" value="5" id="five" />
+              5
+        </section>
+        <button class="add-shoes">Add Shoes</button>
+    </form>
+
+    <section id="shoes-container"></section>
+  </main>
+
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>

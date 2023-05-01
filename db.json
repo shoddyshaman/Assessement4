@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "title": "Jordan 1s",
+        "rating": 5
+    },
+    {
+        "id": 2,
+        "title": "Airmax",
+        "rating": 3
+    },
+    {
+        "id": 3,
+        "title": "New Balance",
+        "rating": 4
+    },
+    {
+        "id": 4,
+        "title": "Addias Runners",
+        "rating": 3
+    },
+    {
+        "id": 5,
+        "title": "Jordan 4s",
+        "rating": 4
+    },
+    {
+        "id": 6,
+        "title": "Nike HyperMax",
+        "rating": 2
+    },
+    {
+        "id": 7,
+        "title": "Skeaters",
+        "rating": 1
+    },
+    {
+        "id": 8,
+        "title": "Balenciaga",
+        "rating": 5
+    },
+    {
+        "id": 9,
+        "title": "Gucci Supreme",
+        "rating": 4
+    },
+    {
+        "id": 10,
+        "title": "Nobull",
+        "rating": 3
+    }
+]
