@@ -1,6 +1,7 @@
 const complimentBtn = document.getElementById("complimentButton");
 const fortuneBtn = document.getElementById('fortuneButton');
 
+
 const getCompliment = () => {
     axios.get("http://localhost:4000/api/compliment/")
         .then(res => {
@@ -23,8 +24,8 @@ fortuneBtn.addEventListener('click', getFortune);
 
 //Part2 
 
-const shoesContainer = document.querySelector('#shoes-container')
-const form = document.querySelector('form')
+const shoesContainer = document.querySelector('#shoes-container');
+const form = document.querySelector('form');
 
 //set base url
 const baseURL = `http://localhost:4000/api/shoes`
@@ -48,6 +49,13 @@ const createShoes = (body) => {
         .catch(errCallback)
 }
 
+const deleteShoes = (id) => {
+    axios.delete(`${baseURL}/${id}`).then((res) => {
+        shoes = res.data
+        displayShoes(shoes)
+    })
+        .catch(errCallback)
+}
 const updateShoes = (id, type) => {
     axios.put(`${baseURL}/${id}`, { type }).then((res) => {
         shoes = res.data
@@ -56,13 +64,6 @@ const updateShoes = (id, type) => {
         .catch(errCallback)
 }
 
-const deleteShoes = (id) => {
-    axios.delete(`${baseURL}/${id}`).then((res) => {
-        shoes = res.data
-        displayShoes(shoes)
-    })
-        .catch(errCallback)
-}
 
 function submitHandler(event) {
     event.preventDefault()
@@ -84,26 +85,26 @@ function submitHandler(event) {
     rating.checked = false
 }
 
-function createShoes(shoes) {
-    const shoesCard = document.createElement('div')
-    shoesCard.classList.add('movie-card')
+// function createShoes(shoes) {
+//     const shoesCard = document.createElement('div')
+//     shoesCard.classList.add('shoes-card')
 
-    movieCard.innerHTML = `<p class="shoes-title">${shoes.title}</p>
-    <div class="btns-container">
-        <button onclick="updateShoes(${shoes.id}, 'minus')">-</button>
-        <p class="shoes-rating">${shoes.rating} stars</p>
-        <button onclick="updateShoes(${shoes.id}, 'plus')">+</button>
-    </div>
-    <button onclick="deleteShoes(${shoes.id})">delete</button>
-    `
+//     shoesCard.innerHTML = `<p class="shoes-title">${shoes.title}</p>
+//     <div class="btns-container">
+//         <button onclick="updateShoes(${shoes.id}, 'minus')">-</button>
+//         <p class="shoes-rating">${shoes.rating} stars</p>
+//         <button onclick="updateShoes(${shoes.id}, 'plus')">+</button>
+//     </div>
+//     <button onclick="deleteShoes(${shoes.id})">delete</button>
+//     `
 
 
-    shoesContainer.appendChild(shoesCard)
-}
+//     shoesContainer.appendChild(shoesCard)
+// }
 
 
 function displayShoes(arr) {
-    albumContainer.innerHTML = ''
+    shoesContainer.innerHTML = ''
     for (let i = 0; i < arr.length; i++) {
         createShoes(arr[i])
     }
@@ -111,5 +112,5 @@ function displayShoes(arr) {
 
 form.addEventListener('submit', submitHandler)
 
-getShoes()
+getShoes();
 

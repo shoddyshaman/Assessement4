@@ -1,6 +1,5 @@
-const shoes = require('./db.json')
+const db = require('../db.json')
 let id = db.length;
-
 
 module.exports = {
 
@@ -45,7 +44,7 @@ module.exports = {
         console.log('Shoe Id:', id);
 
         shoes.splice(shoesIndex, 1);
-        res.status(200).send(shoes);
+        res.status(200).send(db);
     },
 
     updateShoes: (res, req) => {
