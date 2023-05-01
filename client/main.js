@@ -1,6 +1,5 @@
 const complimentBtn = document.getElementById("complimentButton");
 const fortuneBtn = document.getElementById('fortuneButton');
-const shoes = require('./db.json')
 
 const getCompliment = () => {
     axios.get("http://localhost:4000/api/compliment/")

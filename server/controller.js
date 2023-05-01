@@ -1,3 +1,7 @@
+const shoes = require('./db.json')
+let id = db.length;
+
+
 module.exports = {
 
     getCompliment: (req, res) => {
@@ -20,7 +24,7 @@ module.exports = {
 
     },
 
-    //Part2
+    // //Part2
     getShoes: (req, res) => {
         let allShoes = db;
         res.status(200).send(allShoes)
