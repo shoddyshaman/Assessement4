@@ -17,8 +17,8 @@ app.get('/api/fortune', getFortune);
 //Shoes
 app.get('/api/shoes', getShoes);
 app.post('/api/shoes', createShoes);
-app.delete('/api/albums/:shoes_id', deleteShoes);
-app.put('/api/shoes/:shoes_id', updateShoes);
+app.put('/api/shoes/:id', updateShoes);
+app.delete('/api/shoes/:id', deleteShoes);
 
 
 app.listen(4000, () => console.log("Server running on 4000"));

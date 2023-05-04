@@ -37,8 +37,9 @@ module.exports = {
         res.status(200).send(db);
     },
 
-    deleteShoes: () => {
-        let { shoesId: id } = req.param;
+    deleteShoes: (req,res) => {
+        let { id } = req.param;
+        let shoes = db
         let shoesIndex = shoes.findIndex(e => e.id === +id);
         console.log('Shoes Index:', shoesIndex)
         console.log('Shoe Id:', id);
@@ -47,15 +48,15 @@ module.exports = {
         res.status(200).send(db);
     },
 
-    updateShoes: (res, req) => {
-        const { shoes_id } = req.params;
+    updateShoes: (req, res) => {
+        const { id } = req.params;
         const { type } = req.body;
 
-        console.log(shoes.id);
+        console.log(req.params);
         console.log(type);
 
         for (let i = 0; i < db.length; i++) {
-            if (db[i].id === +shoes_id) {
+            if (db[i].id === +id) {
                 if (type === 'plus') {
                     db[i].rating++
                 }
